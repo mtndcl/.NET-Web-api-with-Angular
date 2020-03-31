@@ -1,0 +1,33 @@
+
+
+
+  <section id="cover">
+    <div class="modal-dialog modal-login" >
+      <div class="modal-content">
+        <div class="modal-header">        
+          <h4 class="modal-title">Login</h4>
+        </div>
+        <div class="modal-body">
+         
+            <div class="form-group">
+              <label  style="margin-right: 10px;">Username</label>
+              <input type="text"  name="username"  [(ngModel)]="postdata.username">
+            </div>
+            <div class="form-group">
+              <label  style="margin-right: 10px;">Password</label>
+              <input type="password"   name="password"  [(ngModel)]="postdata.password">
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Login"  (click)="LoginUser()">
+            </div>
+            <div class="form-group">
+              <label  style="color:red;">{{label}}</label>
+            </div>
+                
+          
+        </div>
+        
+      </div>
+    </div>
+
+  </section>

@@ -1,0 +1,60 @@
+
+
+
+
+<nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand text-white">Profile</a>
+    
+    <button class="btn btn-danger my-2 my-sm-0"  (click)="onLogout()">Logout</button>
+</nav>
+
+<br><br>
+<div class="form-group">
+
+    <div  class="col-8">
+    <label for="comment">Text:</label>
+    <textarea class="form-control" rows="5" name="message"  [(ngModel)]="message"></textarea>
+    <br>
+  
+        <button class="btn btn-primary my-2 my-sm-0" (click)="ShowMessage()">Post</button>
+    
+    
+  
+    <br><br>
+  
+    <button class="btn btn-primary my-2 my-sm-0"  (click)="getalluser()">Show All User</button>
+  </div>
+</div>
+  <br>
+
+
+    <div *ngIf="condition"  >
+
+        <div class="col-3">
+
+        </div>
+        <div class="col-3">
+
+      
+        <table  class="table-bordered" style="width:100%">
+            <tr>
+              <th>Id</th>
+              <th>Username</th>
+              <th>online</th>
+            </tr>
+            <tr *ngFor="let user of allUser ">
+              <td>{{user.id}}</td>
+              <td>{{user.username}}</td>
+              <td>{{user.online}}</td>
+            </tr>
+          
+          </table>
+        </div>
+          <div class="col-3">
+
+        </div>
+    </div>
+    
+   
+
+
